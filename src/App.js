@@ -7,47 +7,64 @@ import ItemCreation from './ItemCreation'
 import Tooltip from './Tooltip'
 
 class App extends Component {
-  state = {
-    drag: {
+  constructor(props) {
+    super(props);
 
-    },
-    hover: {
+    this.talismanInit = [13];
+    for (let i = 0; i < 13; i++) {
+      this.talismanInit[i] = {
+        itemType: ""
+      };
+    }
 
-    },
-    talisman: [13],
-    inventory: [32],
-    runewords: [
-      {
-      name: "test",
-      sequence: ["Ar", "Cur", "Bon"],
-      sequencePos: [{x: 0, y: 0}, {x: 1, y: 0}, {x: 2, y: 0}],
-      occurences: []
+    this.state = {
+      drag: {
+
       },
-      {
-      name: "testdiag",
-      sequence: ["Ar", "Bon", "Ar"],
-      sequencePos: [{x: 0, y: 2}, {x: 1, y: 1}, {x: 2, y: 0}],
-      occurences: []
+      hover: {
+
       },
-      {
-      name: "test2",
-      sequence: ["Ar", "Ar", "Bon"],
-      sequencePos: [{x: 0, y: 0}, {x: 1, y: 1}, {x: 2, y: 1}],
-      occurences: []
-      },
-      {
-      name: "test3",
-      sequence: ["Ar", "Cur", "Ar", "Bon"],
-      sequencePos: [{x: 0, y: 0}, {x: 1, y: 0}, {x: 1, y: 1}, {x: 2, y: 2}],
-      occurences: []
-      },
-      {
-      name: "test4",
-      sequence: ["Bon", "Ar", "Ar", "Bon"],
-      sequencePos: [{x: 1, y: 0}, {x: 0, y: 2}, {x: 1, y: 1}, {x: 2, y: 2}],
-      occurences: []
-      }
-    ],
+      talisman: this.talismanInit,
+      inventory: [32],
+      runewords: [
+        {
+        name: "testdiag",
+        sequence: ["Ar", "Bon", "Cur"],
+        sequencePos: [{x: 0, y: 0}, {x: 1, y: -1}, {x: 2, y: -2}],
+        occurences: []
+        },
+        {
+        name: "test",
+        sequence: ["Ar", "Cur", "Bon"],
+        sequencePos: [{x: 0, y: 0}, {x: 1, y: 0}, {x: 2, y: 0}],
+        occurences: []
+        },
+        {
+        name: "test2",
+        sequence: ["Ar", "Ar", "Bon"],
+        sequencePos: [{x: 0, y: 0}, {x: 1, y: 1}, {x: 2, y: 1 }],
+        occurences: []
+        },
+        {
+        name: "test3",
+        sequence: ["Ar", "Cur", "Ar", "Bon"],
+        sequencePos: [{x: 0, y: 0}, {x: 1, y: 0}, {x: 1, y: 1}, {x: 2, y: 2}],
+        occurences: []
+        },
+        {
+        name: "test4",
+        sequence: ["Bon", "Ar", "Ar", "Bon"],
+        sequencePos: [{x: 0, y: 0}, {x: -1, y: 2}, {x: 0, y: 1}, {x: 1, y: 2}],
+        occurences: []
+        },
+        {
+        name: "test5",
+        sequence: ["Bon", "Bon", "Ar"],
+        sequencePos: [{x: 0, y: 0}, {x: 0, y: 1}, {x: 0, y: 2}],
+        occurences: []
+        }
+      ],
+    }
   }
 
   getTalismanSlot = (x, y, talisman) => {
@@ -66,20 +83,21 @@ class App extends Component {
 
     talisman.forEach((slot, index) => {
 
-      if (slot === undefined) {
+      if (slot === undefined || slot.itemType === "") {
         return false
       }
 
       runewords.filter(runeword => {
         for (let i = 0; i < runeword.sequence.length; i++) {
-          let seq = runeword.sequencePos[i]
-          let nextSlot = this.getTalismanSlot(slot.slotX + seq.x, slot.slotY + seq.y, talisman)
 
-          if (nextSlot === undefined) {
+          let seq = runeword.sequencePos[i]
+          let compareSlot = this.getTalismanSlot(slot.slotX + seq.x, slot.slotY + seq.y, talisman)
+
+          if (compareSlot === undefined) {
             return false
           }
 
-          if (nextSlot.itemType !== runeword.sequence[i]) {
+          if (compareSlot.itemType !== runeword.sequence[i]) {
             return false
           }
         }

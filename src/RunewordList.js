@@ -9,8 +9,20 @@ class RunewordList extends Component {
   render() {
     const getGridItems = (runeword) => {
       let gridItems = []
+
+      let offsetX = 0
+      let offsetY = 0
+      runeword.sequencePos.forEach(position => {
+        if (position.x < 0) {
+          offsetX = Math.max(offsetX, Math.abs(position.x))
+        }
+        if (position.y < 0) {
+          offsetY = Math.max(offsetY, Math.abs(position.y))
+        }
+      })
+
       let positions = runeword.sequencePos.map(position => {
-        return position.y * 3 + position.x
+        return position.y * 3 + position.x + offsetX + offsetY * 3
       })
       let sortedPos = positions.slice().sort()
 
