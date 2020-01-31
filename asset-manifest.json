@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Talisman/static/css/main.53fb84cc.chunk.css",
-    "main.js": "/Talisman/static/js/main.6761afad.chunk.js",
-    "main.js.map": "/Talisman/static/js/main.6761afad.chunk.js.map",
+    "main.js": "/Talisman/static/js/main.f039522e.chunk.js",
+    "main.js.map": "/Talisman/static/js/main.f039522e.chunk.js.map",
     "runtime-main.js": "/Talisman/static/js/runtime-main.27b9a631.js",
     "runtime-main.js.map": "/Talisman/static/js/runtime-main.27b9a631.js.map",
     "static/js/2.d0024794.chunk.js": "/Talisman/static/js/2.d0024794.chunk.js",
     "static/js/2.d0024794.chunk.js.map": "/Talisman/static/js/2.d0024794.chunk.js.map",
     "index.html": "/Talisman/index.html",
-    "precache-manifest.98a23cbbf9a9453b1eb6f473bcdeaaa3.js": "/Talisman/precache-manifest.98a23cbbf9a9453b1eb6f473bcdeaaa3.js",
+    "precache-manifest.25f3dd2a090a39ed996284f9c59d5284.js": "/Talisman/precache-manifest.25f3dd2a090a39ed996284f9c59d5284.js",
     "service-worker.js": "/Talisman/service-worker.js",
     "static/css/main.53fb84cc.chunk.css.map": "/Talisman/static/css/main.53fb84cc.chunk.css.map",
     "static/js/2.d0024794.chunk.js.LICENSE": "/Talisman/static/js/2.d0024794.chunk.js.LICENSE",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.27b9a631.js",
     "static/js/2.d0024794.chunk.js",
     "static/css/main.53fb84cc.chunk.css",
-    "static/js/main.6761afad.chunk.js"
+    "static/js/main.f039522e.chunk.js"
   ]
 }

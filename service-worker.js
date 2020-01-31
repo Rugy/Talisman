@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Talisman/precache-manifest.98a23cbbf9a9453b1eb6f473bcdeaaa3.js"
+  "/Talisman/precache-manifest.25f3dd2a090a39ed996284f9c59d5284.js"
 );
 
 self.addEventListener('message', (event) => {

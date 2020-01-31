@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1b1a49498d530b779338f76dc9c64916",
+    "revision": "1ea372f33ca3d73eefe39644433d3917",
     "url": "/Talisman/index.html"
   },
   {
-    "revision": "624862ae009a11361dcc",
+    "revision": "a4ea2c0a99ca43ba67d7",
     "url": "/Talisman/static/css/main.53fb84cc.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Talisman/static/js/2.d0024794.chunk.js.LICENSE"
   },
   {
-    "revision": "624862ae009a11361dcc",
-    "url": "/Talisman/static/js/main.6761afad.chunk.js"
+    "revision": "a4ea2c0a99ca43ba67d7",
+    "url": "/Talisman/static/js/main.f039522e.chunk.js"
   },
   {
     "revision": "c586dc69c5b96096a97c",
